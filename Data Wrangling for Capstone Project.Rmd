@@ -1,0 +1,20 @@
+---
+title: "Data Wrangling for Capstone Project"
+author: "Stephanie Sears"
+date: "7/28/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+In this short report, I will outline the data wrangling steps I have taken to for my Capstone project.
+
+Because of the unique nature of my data mining project, I needed to create a data set because a ready-made dataset of interest was not available. Therefore, my first step was to engage in web scraping. For this step, I identified YouTube as a viable source of unstructured data. To perform this step, I used the R package called Tuber. After obtaining Google credentials, I was able to use Tuber to pull data from YouTube from specific YouTube channels, each with their own unique channel identifications.
+
+Once I pulled the content, I began to create variables for each channel such as views, videostats, videos and comments. I obtained two data sets: 1) comments data with 48,700 comments from three YouTube channels and 2) videostats data frame with 7 variables: channel id, view count, like count, dislike count, favorite count, commnet count, and title. 
+
+Next, to begin to clean the data, I installed the Text Mining Package, TM, and the SnowballC package. Using this package, I converted to al lowercase. 
